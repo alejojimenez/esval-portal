@@ -30,12 +30,22 @@ if __name__ == '__main__':
     driver_path = 'chromedriver.exe'
     
     scraper = Scraper_Esval(url, email, password, driver_path)
-
     #Primer ingreso, año actual
-    print('hacemos login')
+    print('Hacemos scrapping al portal...')
+    print('----------------------------------------------------------------------')
+
     scraper.login()
-    print('hacemos scrapping')
+    print('Hacemos login en el portal...')
+    print('----------------------------------------------------------------------')
+    
     scraper.scrapping_esval()
-    #scraper.upload()
-    print('cerramos')
+    print('Hacemos scrapping al portal...')
+    print('----------------------------------------------------------------------')
+            
+    scraper.archivos()
+    print('Procesando datos hacia Planilla Formato...')
+    print('----------------------------------------------------------------------')
+    
     scraper.close()
+    print('Cerramos el bot...')
+    print('----------------------------------------------------------------------')

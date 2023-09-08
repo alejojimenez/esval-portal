@@ -24,6 +24,7 @@ def rename_file(folder_path_input, folder_path_output):
     
     # Contador de archivos
     file_count = 0
+    nro_cliente = '444801-4'
     
     # Recorrer lista con cada archivo, abrir y extraer numero factura
     for x in range(0, len(new_file_name_list_sort)):
@@ -35,7 +36,7 @@ def rename_file(folder_path_input, folder_path_output):
 
         # Mover a la carpeta output con el nuevo nombre
         source = input_file
-        dest = folder_path_output + new_file_name_list_sort[x]
+        dest = folder_path_output + nro_cliente +'_'+ new_file_name_list_sort[x]
         shutil.copy(source, dest)
         print('Copiando archivo a nuevo destino: ', source, dest)
         print('--------------------------------------------------------------------------')        
